@@ -2,4 +2,35 @@
 
 /* 回答はここに書いてね */
 
+.q3-table{
+  width:100%;
+  text-align:center;
+  table-layout:fixed;
+}
+
+tr:nth-child(odd){
+  background-color:#ecf1f2;
+}
+
+th,td{
+  border:1px solid #dedede;
+  padding:10px;
+}
+
+th{
+  background-color:#2244aa;
+  font-size:18px;
+  line-height:26px;
+  color:#fff;
+}
+
+td{
+  font-size:16px;
+  line-height:22px;
+}
+
+tr:last-child{
+  border-top:2px dashed #000;
+}
+
 /* 回答はここに書いてね */
