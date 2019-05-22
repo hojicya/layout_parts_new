@@ -99,6 +99,39 @@
           <!-- 回答はここに書いてね -->
           <!-- すでについてるクラスにはstyleを指定しない。styleを付ける場合は自分で新たにクラスをつけること -->
           <div class="q8">
+            <div class="contact-form">
+              <div class="form-header">
+                <h4>Form Exercise</h4>
+              </div>
+              <form class="flexbox" action="" method="GET">
+                <ul class="form-right">
+                  <li class="form-li"><p class="form-text">名前<span class="red">*</span></p><input class="input" type="text" name="name" required></li>
+                  <li class="form-li"><p class="form-text">性別</p>
+                    <div class="gender">
+                      <label class="sample-label"><input id="male" type="radio" name="gender" value="male"><span class="lever">男性</span></label>
+                      <label class="sample-label"><input id="female" type="radio" name="gender" value="female"><span class="lever">女性</span></label>
+                    </div></li>
+                  <li class="form-li"><p class="form-text">出身</p>
+                    <div class="select-wrapper">
+                      <select class="input" name="hometown">
+                        <option value="tokyo">東京</option>
+                        <option value="saitama">埼玉</option>
+                        <option value="chiba">千葉</option>
+                        <option value="kanagawa">神奈川</option>
+                      </select>
+                    </div>
+                  </li>
+                  <li class="form-li"><p class="form-text">Eメール<span class="red">*</span></p><input class="input" type="email" name="email" placeholder="ex) hoge@gmail.com" required></li>
+                  <li class="form-li"><p class="form-text">電話番号</p><input class="input" type="tel" name="tel" placeholder="ex) 08012345678"></li>
+                  <li class="form-li"><div class="age20"><label class="sample-label2"><input id="age20" type="checkbox" name="twenty" value="age20"><span class="lever2">20歳以上です</span></label></div></li>
+                  <li class="form-li"><div class="age20"><button class="form-btn" type="submit">送信</button></div></li>
+                </ul>
+                <div class="form-left">
+                  <textarea name="message" placeholder="何かあれば入力してください。"></textarea>
+                </div>
+              </form>
+
+            </div>
             
           </div>
           <!-- 回答はここに書いてね -->

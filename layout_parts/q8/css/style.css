@@ -2,6 +2,8 @@
 
 /* 回答はここに書いてね */
 
+/* button */
+
 .common{
   background-color:#00bcd4;
   color:#fff
@@ -29,7 +31,7 @@
   margin-left:10px;
 }
 
-.btn:first-child{
+.btn:first-of-type{
   margin:0;
 }
 
@@ -57,6 +59,229 @@
   line-height:38px;
 }
 
+/* form */
 
+.contact-form{
+  background-color:#eff3f4;
+  width:740px;
+  margin:0 auto;
+  padding:20px;
+  box-sizing:border-box;
+}
+
+h4{
+  font-size:24px;
+  line-height:24px;
+  font-weight:bold;
+  display:flex;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+h4::after{
+  content:"";
+  flex-grow:1;
+  background:#D4D6D9;
+  height:1px;
+  display:block;
+  margin-left:10px;
+}
+
+.flexbox{
+  display:flex;
+  justify-content:space-between;
+}
+
+.form-right{
+  width:300px;
+  box-sizing: border-box;
+}
+
+.form-li{
+  margin-top:20px;
+}
+
+.form-li:first-child{
+  margin:0;
+}
+
+.form-li::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+.form-text{
+  display:inline-block;
+  padding-right:20px;
+  width:100px;
+  float:left;
+  text-align:right;
+  line-height:25px;
+}
+
+.red{
+  color:#ff4081;
+}
+
+.input{
+  width:180px;
+  padding:5px;
+  box-sizing:border-box;
+  border-radius:3px;
+  border:none;
+  outline:none;
+  font-size:12px;
+  line-height:12px;
+  float:right;
+}
+
+.gender{
+  /* margin-left:60px; */
+  float:right;
+  width:180px;
+}
+
+.age20{
+  display:inline-block;
+  float:right;
+  width:180px;
+  text-align:right;
+}
+
+/* radio */
+
+input[type=radio]{
+  display:none;
+}
+
+.sample-label{
+  position:relative;
+  padding:3px 3px 3px 20px;
+  cursor:pointer;
+}
+
+.lever::before , .lever::after{
+  position:absolute;
+  content:"";
+  display:block;
+  top:50%;
+  border-radius:50%;
+}
+
+.lever::before{
+  left:0;
+  margin-top:-8px;
+  width:14px;
+  height:14px;
+  border:1px solid #ccc;
+  background-color:#fff;
+}
+
+input[type=radio]:checked + .lever::after{
+  border-radius:50%;
+  left:4px;
+  margin-top:-4px;
+  width:8px;
+  height:8px;
+  background-color:#00BCD4;
+}
+
+/* radio end */
+
+/* select */
+
+select{
+  width:100%;
+  cursor:pointer;
+  -webkit-appearance:none;
+  appearance: none;
+  position:relative;
+}
+
+.select-wrapper{
+  position:relative;
+}
+
+.select-wrapper::after{
+  content:"";
+  border:2px solid;
+  border-color:transparent transparent #e5e5e5 #e5e5e5;
+  transform:rotate(-45deg);
+  position:absolute;
+  top:1px;
+  right:10px;
+  width:8px;
+  height:8px;
+}
+
+/* selest end */
+/* checkbox */
+
+input[type=checkbox]{
+  display:none;
+}
+
+.sample-label2{
+  position:relative;
+  padding-left: 24px;
+}
+
+.lever2::before , .lever2::after{
+  content:"";
+  position:absolute;
+  top:50%;
+}
+
+.lever2::before{
+  left:0;
+  margin-top:-9px;
+  width:16px;
+  height:16px;
+  border:1px solid #ccc;
+  background-color:#fff;
+}
+
+input[type=checkbox]:checked + .lever2::after{
+  width:16px;
+  height:8px;
+  border-bottom:3px solid #00BCD4;
+  border-left:3px solid #00BCD4;
+  transform:rotate(-45deg);
+  margin-top:-9px;
+  left:0;
+}
+
+/* checkbox end */
+
+.form-btn{
+  box-sizing:border-box;
+  display:inline-block;
+  font-size:16px;
+  border-radius:5px;
+  padding:0 10px;
+  line-height:26px;
+  border:0;
+  outline:0;
+  background-color:#00BCD4;
+  color:#fff;
+  cursor:pointer;
+}
+
+.form-left{
+  width:380px;
+}
+
+textarea{
+  width:380px;
+  height:203px;
+  padding:10px;
+  box-sizing:border-box;
+  border-radius:3px;
+  border:none;
+  outline:none;
+  font-size:12px;
+  resize:none;
+}
 
 /* 回答はここに書いてね */
