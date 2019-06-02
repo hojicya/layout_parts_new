@@ -14,7 +14,7 @@
 
 .table{
   display:table;
-  table-layout:fixed;
+  /* table-layout:fixed; */
   width:100%;
 }
 
@@ -39,13 +39,13 @@
 .bottom-left{
   background-color:#e5d32e;
   display:table-cell;
-  width:100%;
+  /* width:100%; */
 }
 
 .bottom-center{
   background-color:#ec8f9a;
   display:table-cell;
-  width:100%;
+  /* width:100%; */
 }
 
 .bottom-right{
@@ -55,7 +55,7 @@
 }
 
 .pTB20{
-  padding:20px 0;
+  padding:20px;
 }
 
 /* 回答はここに書いてね */

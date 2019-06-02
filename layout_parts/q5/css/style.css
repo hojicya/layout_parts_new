@@ -81,6 +81,16 @@
   z-index:17;
 }
 
+.box-8::after{
+  content:"";
+  position:absolute;
+  top:0;
+  right:0;
+  width:20px;
+  height:20px;
+  background-color:#ffefd3;
+}
+
 .box-9{
   background-color:#2b69a3;
   position:fixed;
