@@ -32,26 +32,26 @@
           <!-- 新たにタグは追加しなくてもできます。 -->
           <div class="q8 q8--btn">
             <p class="q8__title">ー small ー</p>
-            <div class="btn small-btn common">common</div>
-            <div class="btn small-btn error">error</div>
-            <div class="btn small-btn disabled">disabled</div>
-            <div class="btn small-btn shadow">shadow</div>
+            <div class="btn btnS common">common</div>
+            <div class="btn btnS error">error</div>
+            <div class="btn btnS disabled">disabled</div>
+            <div class="btn btnS shadow">shadow</div>
           </div>
 
           <div class="q8 q8--btn">
             <p class="q8__title">ー middle ー</p>
-            <div class="btn middle-btn common">common</div>
-            <div class="btn middle-btn error">error</div>
-            <div class="btn middle-btn disabled">disabled</div>
-            <div class="btn middle-btn shadow">shadow</div>
+            <div class="btn btnM common">common</div>
+            <div class="btn btnM error">error</div>
+            <div class="btn btnM disabled">disabled</div>
+            <div class="btn btnM shadow">shadow</div>
           </div>
 
           <div class="q8 q8--btn">
             <p class="q8__title">ー large ー</p>
-            <div class="btn large-btn common">common</div>
-            <div class="btn large-btn error">error</div>
-            <div class="btn large-btn disabled">disabled</div>
-            <div class="btn large-btn shadow">shadow</div>
+            <div class="btn btnL common">common</div>
+            <div class="btn btnL error">error</div>
+            <div class="btn btnL disabled">disabled</div>
+            <div class="btn btnL shadow">shadow</div>
           </div>
           <!-- 回答はここに書いてね -->
         </div>
@@ -64,19 +64,15 @@
                Webサイトを作る際、コンタクトフォームを実装する機会がとても多くあります。
                ここで使われるタグは一般的にはデザインするのが難しいと言われていますが、それをやらないといけない状況は結構多いです。（簡単リセットされない、:focusや:activeを使う）
                まずは元々タグにあてられているスタイルを解除して、フラットな状態にしてからスタイルを当てていくことが大事です。
-
                特にradioとcheckboxのチェックのスタイルが難しいと思います。
                やり方として、既存のチェックは使わずに擬似要素でチェックのフィールドを再現します。:checkedを使えばチェックされているかどうかでスタイルを変えることができるので、これをうまく使いましょう。cssでは+（隣接セレクタ）というものも使わなくてはなりませんので、調べてみましょう。
                また、一番下のボタンはbuttonタグを使って実装しましょう。（<input type="submit">を使って実装することも可能です）
-
                この課題では、実際にユーザーが入力した値を送れる状態まで作っていただきます。answerの方で確認していただきたいのですが、全ての入力フォームを適当に記述してsubmitボタンを押してみてください。URL欄の最後に「?name=...」という感じの文字列が追加されているのがわかると思います。（その?以降のものをパラメーターと呼びます。複数ある場合は?◯◯=□□&△△=××のように&繋ぎになります。◯◯や△△の部分はinputタグやselectタグのname属性が入ります。）
                これが、入力した値を送信できている状態です。本来ではこの値をサーバーサイドで受け取ってフォームの処理をするのですが、今回はHTMLを使って送信するまでをやってもらいます。
                answerで入力した値を自分で作ったフォームに全く同じように入力した場合、URLが全く同じように変わる状態にしてください。（formのaction属性やmethod属性が関係してきます）
                また赤の*(アスタリスク)の部分は必須項目です。必須項目を空にしたまま送信しようとするとアラートが表示される処理も再現しましょう。
-
                また、この問題はレイアウトが複雑なため、サイズや色の確認のためにデベロッパーツールを見ても構いません。
                ただ全ての答えを見るといったことはしないようにしましょう。
-
                ■この問題で使う大事なhtml要素
                ・label
                ・form
@@ -98,22 +94,37 @@
           -->
           <!-- 回答はここに書いてね -->
           <!-- すでについてるクラスにはstyleを指定しない。styleを付ける場合は自分で新たにクラスをつけること -->
-          <div class="q8">
-            <div class="contact-form">
-              <div class="form-header">
-                <h4>Form Exercise</h4>
-              </div>
-              <form class="flexbox" action="" method="GET">
-                <ul class="form-right">
-                  <li class="form-li"><p class="form-text">名前<span class="red">*</span></p><input class="input" type="text" name="name" required></li>
-                  <li class="form-li"><p class="form-text">性別</p>
-                    <div class="gender">
-                      <label class="sample-label"><input id="male" type="radio" name="gender" value="male"><span class="lever">男性</span></label>
-                      <label class="sample-label"><input id="female" type="radio" name="gender" value="female"><span class="lever">女性</span></label>
-                    </div></li>
-                  <li class="form-li"><p class="form-text">出身</p>
-                    <div class="select-wrapper">
-                      <select class="input" name="hometown">
+          <div class="q8 q8__wrapper">
+            <h4 class="form__heading">Form Exercise</h4>
+
+            <form class="form clearfix" action="" method="GET">
+              <div class="form__left">
+                <ul class="form__list">
+                  <li class="form__menu clearfix">
+                    <div class="form__item">
+                      <p class="form__item__text">名前<span class="required">*</span></p>
+                    </div>
+                    <div class="form__input">
+                      <input class="input"name="name" type="text" required>
+                    </div>
+                  </li>
+                  <li class="form__menu clearfix">
+                    <div class="form__item">
+                      <p class="form__item__text">性別</p>
+                    </div>
+                    <div class="form__input">
+                      <!-- <label class="gender__radio"><input name="gender" value="male" type="radio">男性</label>
+                      <label class="gender__radio"><input name="gender" value="female" type="radio">女性</label> -->
+                      <label><input name="gender" value="male" type="radio"><span class="gender__radio">男性</span></label>
+                      <label><input name="gender" value="female" type="radio"><span class="gender__radio">女性</span></label>
+                    </div>
+                  </li>
+                  <li class="form__menu clearfix">
+                    <div class="form__item">
+                      <p class="form__item__text">出身</p>
+                    </div>
+                    <div class="form__input select-wrapper">
+                      <select class="input select" name="hometown">
                         <option value="tokyo">東京</option>
                         <option value="saitama">埼玉</option>
                         <option value="chiba">千葉</option>
@@ -121,18 +132,37 @@
                       </select>
                     </div>
                   </li>
-                  <li class="form-li"><p class="form-text">Eメール<span class="red">*</span></p><input class="input" type="email" name="email" placeholder="ex) hoge@gmail.com" required></li>
-                  <li class="form-li"><p class="form-text">電話番号</p><input class="input" type="tel" name="tel" placeholder="ex) 08012345678"></li>
-                  <li class="form-li"><div class="age20"><label class="sample-label2"><input id="age20" type="checkbox" name="twenty" value="age20"><span class="lever2">20歳以上です</span></label></div></li>
-                  <li class="form-li"><div class="age20"><button class="form-btn" type="submit">送信</button></div></li>
+                  <li class="form__menu clearfix">
+                    <div class="form__item">
+                      <p class="form__item__text">Eメール<span class="required">*</span></p>
+                    </div>
+                    <div class="form__input">
+                      <input class="input" name="email" type="email" placeholder="ex) hoge@gmail.com" required>
+                    </div>
+                  </li>
+                  <li class="form__menu clearfix">
+                    <div class="form__item">
+                      <p class="form__item__text">電話番号</p>
+                    </div>
+                    <div class="form__input">
+                      <input class="input" name="tel" type="tel" placeholder="ex) 08012345678">
+                    </div>
+                  </li>
+                  <li class="form__menu clearfix">
+                    <div class="form__input text-right">
+                      <label><input name="twenty" type="checkbox" value="true"><span class="age__checkbox">20歳以上です</span></label>
+                    </div>
+                  </li>
                 </ul>
-                <div class="form-left">
-                  <textarea name="message" placeholder="何かあれば入力してください。"></textarea>
+                <div class="text-right">
+                  <button class="button">送信</button>
                 </div>
-              </form>
+              </div>
 
-            </div>
-            
+              <div class="form__right">
+                <textarea class="input textarea" name="message" placeholder="何かあれば入力してください。"></textarea>
+              </div>
+            </form>
           </div>
           <!-- 回答はここに書いてね -->
         </div>

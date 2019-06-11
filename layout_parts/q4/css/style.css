@@ -2,60 +2,63 @@
 
 /* 回答はここに書いてね */
 
-.top,.bottom{
+.q4-wrapper {
   padding:20px;
-  box-sizing:border-box;
+  background-color:#eff3f4;
   text-align:center;
 }
 
-.top{
-  padding-bottom:0;
-}
-
-.table{
+/* .top {
   display:table;
-  /* table-layout:fixed; */
+  width:100%;
+} */
+
+.table {
+  display:table;
   width:100%;
 }
 
+.table:last-child {
+  margin-top:20px;
+}
+
 .top-left{
-  background-color:#fdc8b8;
   width:100px;
-  display:table-cell;
+  background-color:#fdc8b8;
 }
 
 .top-center{
   background-color:#e0abd9;
-  display:table-cell;
-  width:100%;
 }
 
-.top-right{
-  background-color:#b6d8ed;
+.top-right {
   width:100px;
-  display:table-cell;
+  background-color:#b6d8ed;
 }
+
+/* .bottom {
+  display:table;
+  width:100%;
+  margin-top:20px;
+} */
 
 .bottom-left{
   background-color:#e5d32e;
-  display:table-cell;
-  /* width:100%; */
 }
 
 .bottom-center{
   background-color:#ec8f9a;
-  display:table-cell;
-  /* width:100%; */
 }
 
-.bottom-right{
-  background-color:#8fdcad;
+.bottom-right {
   width:500px;
-  display:table-cell;
+  background-color:#8fdcad;
 }
 
-.pTB20{
+.cell {
+  display:table-cell;
   padding:20px;
 }
+
 
 /* 回答はここに書いてね */

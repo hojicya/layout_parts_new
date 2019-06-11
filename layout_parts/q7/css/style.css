@@ -2,81 +2,84 @@
 
 /* 回答はここに書いてね */
 
-/* 1 */
-
-.q7-box1{
+.q7__item {
   width:225px;
   box-sizing:border-box;
+  font-size:16px;
 }
 
-.box-left{
+/* 7-1 */
+
+.q7__float-left {
   float:left;
 }
 
-.box-right{
+.q7__float-right {
   float:right;
 }
 
-.clearfix::after{
-  content:"";
+.clearfix::after {
   display:block;
   clear:both;
+  content:"";
 }
 
-/* 2 */
+/* 7-2 */
 
-.q7-table{
+.q7__table {
   display:table;
-  /* table-layout: fixed; */
 }
 
-.q7-tablecell{
+.q7__cell {
   display:table-cell;
   vertical-align:middle;
-  align-items:center;
 }
 
-.mR50{
-  margin-right:50px;
+.q7__cell:first-child {
+  padding-right:50px;
 }
 
-/* 3 */
+/* 7-3 */
 
-.q7-inline-left{
-  display:inline-block;
-  vertical-align:middle;
-  margin-right:50px;
+.q7__container {
+  font-size:0;
 }
 
-.q7-inline-right{
+.inline {
   display:inline-block;
   vertical-align:middle;
 }
 
-/* 4 */
+.inline:first-child {
+  margin-right:50px;
+}
 
-.flexbox{
+/* 7-4 */
+
+.flexbox {
   display:flex;
   justify-content:space-around;
-  align-items:center;
+  align-items:flex-end;
 }
 
-/* 5 */
+/* 7-5 */
 
-.inline-wrapper1{
+.q7-5-1 {
   display:inline-block;
   width:300px;
-  vertical-align:top;
 }
 
-.inline-wrapper2{
+.q7-5-2 {
   display:inline-block;
   width:100%;
-  vertical-align:top;
-  margin-right:-300px;
   margin-left:-300px;
   padding-left:350px;
   box-sizing:border-box;
 }
+
+.q7-5__text {
+  font-size:16px;
+}
+
 
 /* 回答はここに書いてね */

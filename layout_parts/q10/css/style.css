@@ -2,48 +2,37 @@
 
 /* 回答はここに書いてね */
 
-.q10-wrapper{
+.bubble {
+  position:relative;
   width:500px;
   margin:0 auto;
-}
-
-.bubble{
-  width:500px;
+  padding:20px;
   border:5px solid #222;
   border-radius:30px;
-  display:inline-block;
-  padding:20px;
-  box-sizing:border-box;
-  position:relative;
   background-color:#fff;
 }
 
-.bubble::before{
+.bubble::before,
+.bubble::after {
   content:"";
-  top:100%;
-  width:0;
-  height:0;
-  border:20px solid transparent;
-  border-top:20px solid #fff;
   position:absolute;
-  top:100%;
-  left:40px;
+  left:30px;
+  border:20px solid transparent;
+}
+
+.bubble::before {
+  border-top-color:#222;
+  bottom:-45px; /* 下padding20px + 下border5px + border20px*/
+  z-index:1;
+}
+
+.bubble::after {
+  border-top-color:#fff;
+  bottom:-38px;  /* padding20px + border5px + */
   z-index:2;
 }
 
-.bubble::after{
-  content:"";
-  top:100%;
-  width:0;
-  height:0;
-  border:25px solid transparent;
-  border-top:25px solid #222;
-  position:absolute;
-  top:101%;
-  left:35px;
-}
-
-.q10-text{
+.q10__text {
   font-size:16px;
   line-height:16px;
 }

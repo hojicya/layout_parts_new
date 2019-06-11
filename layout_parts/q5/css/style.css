@@ -2,86 +2,95 @@
 
 /* 回答はここに書いてね */
 
-.q5-wrapper{
-  background-color:#ECF1F2;
-  width:500px;
-  margin:0 auto;
-  position:relative;
-}
-
-.q5-wrapper::before{
-  content:"";
-  display:block;
-  padding-top:100%;
-}
-
-.box-1{
-  background-color:#ffefd3;
+.model {
   position:absolute;
+  width:100px;
+  height:100px;
+  font-size:30px;
+  font-weight:bold;
+  text-align:center;
+  line-height:100px;
+}
+
+.box9 {
+  position:fixed;
+  top:10px;
+  left:10px;
+  background-color:#2b69a3;
+}
+
+.q5-wrapper {
+  position:relative;
+  width:500px;
+  height:500px;
+  margin:0 auto;
+  background-color:#ecf1f2;
+}
+
+.box1 {
+  /* position:absolute; */
   top:40px;
   left:200px;
-  z-index:10;
+  z-index:1;
+  background-color:#ffefd3;
 }
 
-.box-2{
-  background-color:#7084de;
-  position:absolute;
+.box2 {
+  /* position:absolute; */
   top:120px;
-  left:280px;
-  z-index:11;
+  right:120px;
+  z-index:2;
+  background-color:#7084de;
 }
 
-.box-3{
-  background-color:#d0ecea;
-  position:absolute;
+.box3 {
+  /* position:absolute; */
   top:200px;
-  /* left:360px; */
   right:40px;
-  z-index:12
+  z-index:3;
+  background-color:#d0ecea;
 }
 
-.box-4{
+.box4 {
+  /* position:absolute; */
+  right:120px;
+  bottom:120px;
+  z-index:4;
   background-color:#8b7a5e;
-  position:absolute;
-  top:280px;
-  left:280px;
-  z-index:13;
 }
 
-.box-5{
-  background-color:#9fd6d2;
-  position:absolute;
-  /* bottom:40px; */
-  top:360px;
+.box5 {
+  /* position:absolute; */
+  bottom:40px;
   left:200px;
-  z-index:14;
+  z-index:5;
+  background-color:#9fd6d2;
 }
 
-.box-6{
-  background-color:#fffee4;
-  position:absolute;
-  top:280px;
+.box6 {
+  /* position:absolute; */
+  bottom:120px;
   left:120px;
-  z-index:15;
+  z-index:6;
+  background-color:#fffee4;
 }
 
-.box-7{
-  background-color:#deae70;
-  position:absolute;
+.box7 {
+  /* position:absolute; */
   top:200px;
   left:40px;
-  z-index:16;
+  z-index:7;
+  background-color:#deae70;
 }
 
-.box-8{
-  background-color:#de70cf;
-  position:absolute;
+.box8 {
+  /* position:absolute; */
   top:120px;
   left:120px;
-  z-index:17;
+  z-index:8;
+  background-color:#de70cf;
 }
-
-.box-8::after{
+.box8::after {
   content:"";
   position:absolute;
   top:0;
@@ -89,22 +98,6 @@
   width:20px;
   height:20px;
   background-color:#ffefd3;
-}
-
-.box-9{
-  background-color:#2b69a3;
-  position:fixed;
-  top:10px;
-  left:10px;
-}
-
-.layout{
-  width:100px;
-  height:100px;
-  text-align:center;
-  line-height:100px;
-  font-weight:bold;
-  font-size:30px;
 }
 
 /* 回答はここに書いてね */

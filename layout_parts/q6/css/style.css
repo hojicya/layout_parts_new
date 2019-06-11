@@ -2,56 +2,55 @@
 
 /* 回答はここに書いてね */
 
-/* 1 */
+/* 6-1 */
 
-.q6-text1{
-  background-color:#e6f2ff;
-  padding:10px 0;
+.q6__text {
+  display:inline-block;
   width:90px;
-}
-
-.header-left{
+  padding:10px 0;
+  background-color:#e6f2ff;
   text-align:center;
 }
 
-.q6-inline{
-  display:inline-block;
+.text-align {
+  display:block;
+  text-align:center;
 }
 
-.q6-margin{
+.margin-auto {
+  display:block;
   margin:0 auto;
+}
+
+/* 6-2 */
+
+.q6-2__text {
+  display:inline-block;
+  padding:10px;
+  background-color:#fff;
+}
+
+.q6__table {
+  display:table;
   text-align:center;
 }
 
-/* 2 */
-
-.q6-text2{
-  background-color:#fff;
-  padding:10px;
-  display:inline-block;
-}
-
-.table-wrapper{
-  display:table;
-}
-
-.table-text{
+.q6__cell {
   display:table-cell;
   vertical-align:middle;
-  text-align:center;
 }
 
-.flexbox{
+.flexbox {
   display:flex;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
 }
 
-.q6-position{
+.q6__wrapper {
   position:relative;
 }
 
-.q6-text3-1{
+.q6-3__text {
   position:absolute;
   top:0;
   right:0;
@@ -62,11 +61,12 @@
   height:30px;
 }
 
-.q6-text3-2{
+.q6-4__text {
   position:absolute;
   top:50%;
   left:50%;
-  transform:translate(-50%,-50%);
+  transform:translateY(-50%) translateX(-50%);
+  padding:10px;
 }
 
 /* 回答はここに書いてね */
