@@ -14,8 +14,8 @@
   float:left;
 }
 
-.q7__float-right {
-  float:right;
+.q7__float-left:first-child {
+  margin-right:50px;
 }
 
 .clearfix::after {

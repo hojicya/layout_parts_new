@@ -22,13 +22,14 @@
 
 .bubble::before {
   border-top-color:#222;
-  bottom:-45px; /* 下padding20px + 下border5px + border20px*/
+  top:102%;
+  /*bottom:-45px; /* 下padding20px + 下border5px + border20px*/
   z-index:1;
 }
 
 .bubble::after {
   border-top-color:#fff;
-  bottom:-38px;  /* padding20px + border5px + */
+  top:98%;
   z-index:2;
 }
 
